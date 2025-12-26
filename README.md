@@ -2,3 +2,4 @@
 - energetika
 - win-win vztahy bez kompromisu
 - filosofie
+- Afrika
