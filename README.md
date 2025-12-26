@@ -1,2 +1,2 @@
-# mamarafiki.github.io
+# Lorem ipsum
 Mama rafiki
