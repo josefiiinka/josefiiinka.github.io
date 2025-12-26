@@ -1,4 +1,4 @@
-# Lorem ipsum
-Mama rafiki
-
-abcd
+- mateřství
+- energetika
+- win-win vztahy bez kompromisu
+- filosofie
