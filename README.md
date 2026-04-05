@@ -16,7 +16,7 @@ Nemusíte mít tedy při povídání si se mnou pocit, že jste pacient nebo kli
 
 
 
-Pojďme spolu mluvit. Bude to o Vašem příběhu, ale nebudete v tom sami. a
+Pojďme spolu mluvit. Bude to o Vašem příběhu, ale nebudete v tom sami.
 
 
 
