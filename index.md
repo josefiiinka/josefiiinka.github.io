@@ -29,5 +29,5 @@ Pojďme spolu mluvit. Bude to o Vašem příběhu, ale nebudete v tom sami.
 
 ## Články
 
-- [Kde si doopravdy dobíjím baterky](clanek_kde_si_dobijim_baterky.html)
-- [Poslední rande bez dětí](clanek_3_posledni_rande_bez_deti.html)
+- [Kde si doopravdy dobíjím baterky]({% link clanek_kde_si_dobijim_baterky.html %})
+- [Poslední rande bez dětí]({% link clanek_3_posledni_rande_bez_deti.html %})
