@@ -7,7 +7,11 @@ default_lang: en
 
 # Site settings
 title: Mama Rafiki
-description: "Vaše příběhy mi odhalují cesty, které v mapě nenajdete."
+
+# Language-specific descriptions
+descriptions:
+  en: "Your stories reveal to me paths that cannot be found on any map."
+  cs: "Vaše příběhy mi odhalují cesty, které v mapě nenajdete."
 
 # Languages
 languages:
