@@ -35,6 +35,7 @@ Let's talk together. It will be about your story, but you won't be alone in it.
 - [Where I truly recharge my batteries]({% link en/clanek_kde_si_dobijim_baterky.html %})
 - [Last date without children]({% link en/clanek_3_posledni_rande_bez_deti.html %})
 - [Maternity leave as an opportunity]({% link en/clanek_materska_jako_sance.html %})
+- [Do I need to be a time management master to find 10 minutes a day for Spanish?]({% link en/clanek_kapacita_time_management.html %})
 
 ## Diary
 

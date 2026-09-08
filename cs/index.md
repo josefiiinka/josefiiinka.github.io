@@ -35,6 +35,7 @@ Pojďme spolu mluvit. Bude to o Vašem příběhu, ale nebudete v tom sami.
 - [Kde si doopravdy dobíjím baterky]({% link cs/clanek_kde_si_dobijim_baterky.html %})
 - [Poslední rande bez dětí]({% link cs/clanek_3_posledni_rande_bez_deti.html %})
 - [Mateřská jako šance]({% link cs/clanek_materska_jako_sance.html %})
+- [Musím být mistr time managementu, abych si našla 10 minut denně na španělštinu?]({% link cs/clanek_kapacita_time_management.html %})
 
 ## Deník
 
