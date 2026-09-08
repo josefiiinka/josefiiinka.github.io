@@ -2,7 +2,7 @@
 layout: default
 title: Mama Rafiki
 lang: en
-permalink: /
+permalink: /en/
 ---
 
 ## Who am I?

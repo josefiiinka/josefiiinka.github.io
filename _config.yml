@@ -1,5 +1,35 @@
 remote_theme: pages-themes/slate@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-remote-theme
+
+# Default language
+default_lang: en
+
+# Site settings
 title: Mama Rafiki
-description: Vaše příběhy mi odhalují cesty, které v mapě nenajdete.
+description: "Your stories reveal to me paths that cannot be found on any map."
+
+# Languages
+languages:
+  - en
+  - cs
+
+# Language names
+language_names:
+  en: English
+  cs: Čeština
+
+# URL structure
+permalink: /:lang/:title/
+
+# Collections for i18n
+i18n:
+  collections:
+    - posts
+    - pages
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
+  - .DS_Store
