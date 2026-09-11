@@ -30,7 +30,7 @@ dialog{border:1px solid #ddd;border-radius:6px;background:#fff;color:#171717;pad
 <main>
 <div class="tiles" aria-label="Mama rafiki — rozcestník">
 <button class="tile center" data-dialog="contact" aria-haspopup="dialog"><span class="tile-name">Mama<br>rafiki</span><span class="tile-note">Josefína Drbálková · Kontakt</span><span class="tile-arrow" aria-hidden="true">+</span></button>
-<button class="tile write" data-dialog="writing" aria-haspopup="dialog"><span class="tile-name">Píšu</span><span class="tile-note">Články a deník</span><span class="tile-arrow" aria-hidden="true">+</span></button>
+<button class="tile write" data-dialog="writing" aria-haspopup="dialog"><span class="tile-name" role="img" aria-label="Píšu">✏️</span><span class="tile-note">Články a deník</span><span class="tile-arrow" aria-hidden="true">+</span></button>
 <button class="tile inspire" data-dialog="inspiration" aria-haspopup="dialog"><span class="tile-name">Inspiruju se</span><span class="tile-note">Připravuji</span><span class="tile-arrow" aria-hidden="true">+</span></button>
 </div>
 </main>
