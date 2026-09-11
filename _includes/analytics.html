@@ -1,0 +1,24 @@
+{% if site.goatcounter_code and site.goatcounter_code != '' %}
+<script>
+(function () {
+  var events = {
+    contact: ['open-contact', 'Otevření kontaktu'],
+    writing: ['open-writing', 'Otevření seznamu článků'],
+    inspiration: ['open-inspiration', 'Otevření inspirace']
+  };
+  document.querySelectorAll('[data-dialog]').forEach(function (element) {
+    var event = events[element.getAttribute('data-dialog')];
+    if (event) {
+      element.setAttribute('data-goatcounter-click', event[0]);
+      element.setAttribute('data-goatcounter-title', event[1]);
+    }
+  });
+  document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"]').forEach(function (element) {
+    var phone = element.getAttribute('href').indexOf('tel:') === 0;
+    element.setAttribute('data-goatcounter-click', phone ? 'click-phone' : 'click-email');
+    element.setAttribute('data-goatcounter-title', phone ? 'Kliknutí na telefon' : 'Kliknutí na e-mail');
+  });
+})();
+</script>
+<script data-goatcounter="https://{{ site.goatcounter_code | escape }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{% endif %}
