@@ -26,7 +26,7 @@ dialog{border:1px solid #ddd;border-radius:6px;background:#fff;color:#171717;pad
 </style>
 </head>
 <body>
-<nav class="languages" aria-label="Jazyk"><a href="/cs/" lang="cs" aria-current="page">CS</a><a href="/" lang="en">EN</a></nav>
+<nav class="languages" aria-label="Jazyk"><a href="/cs/" lang="cs" aria-current="page">CS</a><a href="/en/" lang="en">EN</a></nav>
 <main>
 <div class="tiles" aria-label="Mama rafiki — rozcestník">
 <button class="tile center" data-dialog="contact" aria-haspopup="dialog"><span class="tile-name">Mama<br>rafiki</span><span class="tile-note">Josefína Drbálková · Kontakt</span><span class="tile-arrow" aria-hidden="true">+</span></button>
