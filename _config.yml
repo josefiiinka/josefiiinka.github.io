@@ -37,3 +37,6 @@ exclude:
   - README.md
   - .gitignore
   - .DS_Store
+
+# Public GoatCounter site identifier
+goatcounter_code: mamarafiki
