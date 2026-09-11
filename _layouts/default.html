@@ -28,11 +28,14 @@
           {% endif %}
 
           <h1 id="project_title"><a href="{% if page.lang == 'cs' %}{{ '/cs/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{{ site.title | default: site.github.repository_name }}</a></h1>
+          {% unless page.lang == 'cs' %}
           {% if site.descriptions %}
           <h2 id="project_tagline">{{ site.descriptions[page.lang] | default: site.description | default: site.github.project_tagline }}</h2>
           {% else %}
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
           {% endif %}
+
+          {% endunless %}
 
           {% if site.show_downloads %}
             <section id="downloads">
