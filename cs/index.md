@@ -31,6 +31,7 @@ Pojďme spolu mluvit. Bude to o Vašem příběhu, ale nebudete v tom sami.
 
 ## Články
 
+- [Když pak potkáš svoji družinářku na ulici]({% link cs/clanek_kdyz_potkas_druzinarku.html %})
 - [Už se nebojím zimy]({% link cs/clanek_uz_se_nebojim_zimy.html %})
 - [Kde si doopravdy dobíjím baterky]({% link cs/clanek_kde_si_dobijim_baterky.html %})
 - [Poslední rande bez dětí]({% link cs/clanek_3_posledni_rande_bez_deti.html %})
