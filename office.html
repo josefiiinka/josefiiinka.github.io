@@ -108,7 +108,7 @@ $('loginForm').onsubmit=async e=>{
  const r=await fetch(URL+'/auth/v1/token?grant_type=password',{method:'POST',headers:{apikey:KEY,'Content-Type':'application/json'},body:JSON.stringify({email:$('email').value.trim(),password:$('password').value})});
  if(!r.ok){
  const err=await r.json().catch(()=>({}));
- const code=err.code||err.error_code||'';
+ const code=err.error_code||(typeof err.code==='string'?err.code:'')||'';
  const messages={
  invalid_credentials:'Nesprávný e-mail nebo heslo. Použij účet vytvořený v Authentication → Users.',
  email_not_confirmed:'E-mail není potvrzený. V Supabase otevři Authentication → Users a zkontroluj potvrzení svého účtu.',
@@ -116,7 +116,8 @@ $('loginForm').onsubmit=async e=>{
  over_request_rate_limit:'Příliš mnoho pokusů. Zkus přihlášení za chvíli.',
  email_provider_disabled:'Přihlášení e-mailem je vypnuté.'
  };
- throw Error(messages[code]||('Přihlášení se nezdařilo (HTTP '+r.status+(code?', '+code:'')+').'));
+ const detail=err.msg||err.error_description||err.message||'';
+ throw Error(messages[code]||('Přihlášení se nezdařilo (HTTP '+r.status+(code?', '+code:'')+').'+(detail?' '+detail:'')));
  }
  const data=await r.json();if(data.user?.id!==OWNER)throw Error('Tento účet nemá přístup.');
  session=data;session.until=Date.now()+session.expires_in*1000;
