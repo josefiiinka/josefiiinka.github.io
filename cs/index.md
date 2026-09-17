@@ -23,6 +23,39 @@ footer{position:absolute;bottom:24px;width:100%;text-align:center;color:#777;fon
 dialog{border:1px solid #ddd;border-radius:6px;background:#fff;color:#171717;padding:44px;width:min(680px,calc(100% - 32px));max-height:85svh;box-shadow:0 30px 100px #0002}dialog::backdrop{background:#0004;backdrop-filter:blur(5px)}dialog h2{font:400 42px/1.15 Georgia,serif;margin:0 50px 30px 0}dialog h3{font:400 26px Georgia,serif;margin-top:36px}.close{position:absolute;right:18px;top:16px;border:0;background:#f1f1f1;width:40px;height:40px;border-radius:50%;font-size:26px;cursor:pointer}.contact{font-size:18px;line-height:1.8}.contact p{margin:12px 0}.contact a{text-underline-offset:5px;overflow-wrap:anywhere}.article-list{list-style:none;padding:0;margin:0}.article-list li{border-bottom:1px solid #e5e5e5}.article-list a{padding:18px 0;display:flex;justify-content:space-between;gap:20px;text-decoration:none;font-size:18px;line-height:1.5}.article-list a:hover{text-decoration:underline;text-underline-offset:4px}.article-list span{flex:none;color:#777}.soon{line-height:1.7;color:#666}
 @media(max-width:700px){main{padding:90px 22px 60px}.tiles{max-width:440px;grid-template-columns:1fr 1fr;gap:16px}.center{order:0;grid-column:1/-1;min-height:0;width:min(100%,360px);justify-self:center;padding:30px}.center .tile-name{font-size:68px}.write,.inspire{transform:none;min-height:190px;padding:22px}.write:hover,.inspire:hover{transform:translateY(-4px)}.tile-name{font-size:28px}.tile-arrow{right:20px;bottom:20px}.tile-note{max-width:80%}footer{position:static;padding:0 0 22px}dialog{padding:32px 24px}dialog h2{font-size:34px}.languages{top:20px;right:24px}}
 @media(prefers-reduced-motion:reduce){.tile{transition:none}}
+
+/* Categories arranged around the central circle. */
+main{padding:75px 20px 30px;min-height:calc(100svh - 45px)}
+.tiles{display:block;position:relative;width:min(100%,1000px);height:690px}
+.tiles .tile{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);min-height:0;aspect-ratio:1;padding:22px;border-radius:50%;align-items:center;justify-content:center;text-align:center;gap:12px;transform:translate(-50%,-50%)}
+.tiles .tile:hover{transform:translate(-50%,-50%) translateY(-5px)}
+.tiles .center{--x:50%;--y:48%;--size:340px;background:#e3e3e3}
+.tiles .write{--x:15%;--y:28%;--size:180px}
+.tiles .inspire{--x:84%;--y:31%;--size:200px}
+.tiles .reading{--x:66%;--y:87%;--size:180px}
+.tiles .center .tile-name{font-size:72px}
+.tiles .write .tile-name{font-size:48px}
+.tiles .inspire .tile-name,.tiles .reading .tile-name{font-size:30px}
+.tiles .tile-note{max-width:100%}
+.tiles .tile-arrow{position:static;font-size:20px;line-height:1}
+footer{position:static;padding:0 0 22px}
+@media(min-width:701px) and (max-width:900px){
+.tiles .center{--size:280px}.tiles .center .tile-name{font-size:60px}
+.tiles .write{--size:150px;--x:14%}.tiles .inspire{--size:170px;--x:86%}
+}
+@media(max-width:700px){
+main{padding:65px 16px 15px}
+.tiles{max-width:440px;height:620px}
+.tiles .center{--x:50%;--y:49%;--size:230px}
+.tiles .center .tile-name{font-size:56px;letter-spacing:-2px}
+.tiles .write{--x:19%;--y:14%;--size:112px;padding:12px}
+.tiles .write .tile-name{font-size:36px}
+.tiles .write .tile-note{font-size:14px}
+.tiles .inspire{--x:79%;--y:19%;--size:126px;padding:16px}
+.tiles .reading{--x:36%;--y:86%;--size:140px;padding:16px}
+.tiles .inspire .tile-name,.tiles .reading .tile-name{font-size:24px}
+}
+
 </style>
 </head>
 <body>
@@ -32,12 +65,14 @@ dialog{border:1px solid #ddd;border-radius:6px;background:#fff;color:#171717;pad
 <button class="tile center" data-dialog="contact" aria-haspopup="dialog" aria-label="Mama rafiki – otevřít kontakt"><span class="tile-name">Mama<br>rafiki</span></button>
 <button class="tile write" data-dialog="writing" aria-haspopup="dialog"><span class="tile-name" role="img" aria-label="Píšu">✍️</span><span class="tile-note">Články a deník</span><span class="tile-arrow" aria-hidden="true">+</span></button>
 <button class="tile inspire" data-dialog="inspiration" aria-haspopup="dialog"><span class="tile-name">Inspiruju se</span><span class="tile-note">Připravuji</span><span class="tile-arrow" aria-hidden="true">+</span></button>
+<button class="tile reading" data-dialog="reading" aria-haspopup="dialog"><span class="tile-name">Právě čtu</span><span class="tile-arrow" aria-hidden="true">+</span></button>
 </div>
 </main>
 <footer>Mama rafiki</footer>
 <dialog id="contact" aria-labelledby="contact-title"><button class="close" aria-label="Zavřít">×</button><h2 id="contact-title">Kontakt</h2><div class="contact"><p>Josefína Drbálková</p><p><a href="tel:+420602316755">+420 602 316 755</a><br><a href="mailto:josefina.drbalkova@email.cz">josefina.drbalkova@email.cz</a></p></div></dialog>
 <dialog id="writing" aria-labelledby="writing-title"><button class="close" aria-label="Zavřít">×</button><h2 id="writing-title">Píšu</h2><h3>Články</h3><ul class="article-list"><li><a href="{% link cs/clanek_kdyz_potkas_druzinarku.html %}">Když pak potkáš svoji družinářku na ulici<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_uz_se_nebojim_zimy.html %}">Už se nebojím zimy<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_kde_si_dobijim_baterky.html %}">Kde si doopravdy dobíjím baterky<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_3_posledni_rande_bez_deti.html %}">Poslední rande bez dětí<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_materska_jako_sance.html %}">Mateřská jako šance<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_kapacita_time_management.html %}">Musím být mistr time managementu, abych si našla 10 minut denně na španělštinu?<span aria-hidden="true">↗</span></a></li></ul><h3>Deník</h3><ul class="article-list"><li><a href="{% link cs/denik_vasik_jako_fotbalista.html %}">Vašík jako fotbalista<span aria-hidden="true">↗</span></a></li></ul></dialog>
 <dialog id="inspiration" aria-labelledby="inspiration-title"><button class="close" aria-label="Zavřít">×</button><h2 id="inspiration-title">Inspiruju se</h2><p class="soon">Tuto sekci pro vás připravuji.</p></dialog>
+<dialog id="reading" aria-labelledby="reading-title"><button class="close" aria-label="Zavřít">×</button><h2 id="reading-title">Právě čtu</h2><p class="soon">Tuto sekci pro vás připravuji.</p></dialog>
 <script>
 document.querySelectorAll('[data-dialog]').forEach(button=>button.addEventListener('click',()=>document.getElementById(button.dataset.dialog).showModal()));
 document.querySelectorAll('dialog').forEach(dialog=>{
