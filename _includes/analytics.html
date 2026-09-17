@@ -4,7 +4,8 @@
   var events = {
     contact: ['open-contact', 'Otevření kontaktu'],
     writing: ['open-writing', 'Otevření seznamu článků'],
-    inspiration: ['open-inspiration', 'Otevření inspirace']
+    inspiration: ['open-inspiration', 'Otevření inspirace'],
+    reading: ['open-reading', 'Otevření Právě čtu']
   };
   document.querySelectorAll('[data-dialog]').forEach(function (element) {
     var event = events[element.getAttribute('data-dialog')];
