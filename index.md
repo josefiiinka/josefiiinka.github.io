@@ -57,6 +57,30 @@ main{padding:65px 16px 15px}
 
 .about-support{width:min(100%,680px);margin:0 auto 55px;text-align:center;line-height:1.75}.about-label{font-size:14px;letter-spacing:.04em;color:#666}.about-support h1{font:400 clamp(28px,5vw,40px)/1.2 Georgia,serif;margin:16px 0 24px}.about-support p{margin:16px 0}.about-scope{font-size:15px;color:#555}.support-contact{border:1px solid #171717;border-radius:30px;padding:13px 26px;background:#171717;color:white;cursor:pointer;margin-top:12px}.support-contact:hover{background:#383838}.support-contact:focus-visible{outline:3px solid #171717;outline-offset:5px}
 .tiles .inspire .tile-name{font-size:clamp(22px,3vw,30px);line-height:1.15;max-width:100%;overflow-wrap:normal}.inspiration-names{list-style:none;padding:0;margin:0;font-size:20px;line-height:1.6}.inspiration-names li{padding:14px 0;border-bottom:1px solid #e5e5e5}@media(max-width:700px){.tiles .inspire .tile-name{font-size:22px}.inspiration-names{font-size:18px}}
+
+/* Three circle sizes for the homepage navigation. */
+.tiles{height:760px}
+.tiles .center{--x:50%;--y:43%;--size:340px}
+.tiles .write{--x:15%;--y:24%;--size:180px}
+.tiles .offer{--x:85%;--y:24%;--size:180px}
+.tiles .work{--x:50%;--y:84%;--size:180px}
+.tiles .inspire{--x:18%;--y:67%;--size:120px}
+.tiles .reading{--x:82%;--y:67%;--size:120px}
+.tiles .write .tile-name,.tiles .offer .tile-name,.tiles .work .tile-name{font-size:36px}
+.tiles .inspire .tile-name,.tiles .reading .tile-name{font-size:28px}
+.offer-copy{line-height:1.75}.offer-copy .about-scope{font-size:15px;color:#555}
+@media(min-width:701px) and (max-width:900px){.tiles .center{--size:280px}.tiles .write,.tiles .offer,.tiles .work{--size:150px}.tiles .write .tile-name,.tiles .offer .tile-name,.tiles .work .tile-name{font-size:30px}}
+@media(max-width:700px){
+.tiles{height:690px;max-width:440px}
+.tiles .center{--x:50%;--y:330px;--size:230px}
+.tiles .write{--x:24%;--y:90px;--size:128px}
+.tiles .offer{--x:76%;--y:90px;--size:128px}
+.tiles .work{--x:50%;--y:610px;--size:128px}
+.tiles .inspire{--x:18%;--y:500px;--size:92px}
+.tiles .reading{--x:82%;--y:500px;--size:92px}
+.tiles .write .tile-name,.tiles .offer .tile-name,.tiles .work .tile-name{font-size:27px}
+.tiles .inspire .tile-name,.tiles .reading .tile-name{font-size:23px}
+}
 </style>
 </head>
 <body>
@@ -64,23 +88,27 @@ main{padding:65px 16px 15px}
 <main>
 <div class="tiles" aria-label="Mama rafiki — rozcestník">
 <button class="tile center" data-dialog="contact" aria-haspopup="dialog" aria-label="Mama rafiki – otevřít kontakt"><span class="tile-name">Mama<br>rafiki</span></button>
-<button class="tile write" data-dialog="writing" aria-haspopup="dialog"><span class="tile-name">Píšu</span><span class="tile-note">Články a deník</span></button>
-<button class="tile inspire" data-dialog="inspiration" aria-haspopup="dialog"><span class="tile-name">Inspiruji<br>se</span></button>
-<button class="tile reading" data-dialog="reading" aria-haspopup="dialog"><span class="tile-name">Právě čtu</span></button>
+<button class="tile write" data-dialog="writing" aria-haspopup="dialog"><span class="tile-name">Píšu</span></button>
+<button class="tile offer" data-dialog="offering" aria-haspopup="dialog"><span class="tile-name">Nabízím</span></button>
+<button class="tile work" data-dialog="working" aria-haspopup="dialog"><span class="tile-name">Pracuji</span></button>
+<button class="tile inspire" data-dialog="inspiration" aria-haspopup="dialog"><span class="tile-name">Věřím</span></button>
+<button class="tile reading" data-dialog="reading" aria-haspopup="dialog"><span class="tile-name">Čtu</span></button>
 </div>
-<section class="about-support" aria-labelledby="about-support-title">
-<p class="about-label">Josefína Drbálková · novinářka a máma</p>
-<h1 id="about-support-title">Prostor pro vás a vaše mateřství</h1>
-<p>Nabízím podpůrné rozhovory o kojení a mateřství — prostor pro vaše otázky, naslouchání a sdílení zkušeností.</p>
-<p class="about-scope">Vycházím z vlastní zkušenosti s kojením. Nemám odborné vzdělání ani certifikaci v laktačním poradenství. Moje podpora nenahrazuje péči laktační poradkyně nebo zdravotníka.</p>
-<button class="support-contact" data-dialog="contact" aria-haspopup="dialog">Ozvěte se mi</button>
-</section>
+
 </main>
 <footer>Mama rafiki</footer>
 <dialog id="contact" aria-labelledby="contact-title"><button class="close" aria-label="Zavřít">×</button><h2 id="contact-title">Kontakt</h2><div class="contact"><p>Josefína Drbálková</p><p><a href="tel:+420602316755">+420 602 316 755</a><br><a href="mailto:josefina.drbalkova@email.cz">josefina.drbalkova@email.cz</a></p></div></dialog>
 <dialog id="writing" aria-labelledby="writing-title"><button class="close" aria-label="Zavřít">×</button><h2 id="writing-title">Píšu</h2><h3>Články</h3><ul class="article-list"><li><a href="{% link cs/clanek_kdyz_potkas_druzinarku.html %}">Když pak potkáš svoji družinářku na ulici<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_uz_se_nebojim_zimy.html %}">Už se nebojím zimy<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_kde_si_dobijim_baterky.html %}">Kde si doopravdy dobíjím baterky<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_3_posledni_rande_bez_deti.html %}">Poslední rande bez dětí<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_materska_jako_sance.html %}">Mateřská jako šance<span aria-hidden="true">↗</span></a></li><li><a href="{% link cs/clanek_kapacita_time_management.html %}">Musím být mistr time managementu, abych si našla 10 minut denně na španělštinu?<span aria-hidden="true">↗</span></a></li></ul><h3><a href="/cs/laktacni-poradenstvi/">Laktační poradenství</a></h3><ul class="article-list"><li><a href="/cs/problemem-neni-voda-ale-susene-mleko/">Problémem není voda, ale sušené mléko<span aria-hidden="true">↗</span></a></li></ul><h3>Deník</h3><ul class="article-list"><li><a href="{% link cs/denik_vasik_jako_fotbalista.html %}">Vašík jako fotbalista<span aria-hidden="true">↗</span></a></li></ul></dialog>
-<dialog id="inspiration" aria-labelledby="inspiration-title"><button class="close" aria-label="Zavřít">×</button><h2 id="inspiration-title">Inspiruji se</h2><ul class="inspiration-names"><li>Jiří Halda</li><li>Milan Studnička</li><li>Štěpánka Cimlová a Robert Čapek</li><li>Dalibor Špok</li><li>Margit Slimáková</li><li>Barbara Paldus</li></ul></dialog>
-<dialog id="reading" aria-labelledby="reading-title"><button class="close" aria-label="Zavřít">×</button><h2 id="reading-title">Právě čtu</h2><h3>Výchova jako teoretický problém od Jiřího Pelikána</h3><p style="line-height:1.7">Kniha se zabývá tím, jak výchova ovlivňuje člověka, co jí chceme dosáhnout a za jakých podmínek se nám to může podařit. Je to odborné přemýšlení o základech výchovy a o vztahu mezi vychovatelem a vychovávaným.</p></dialog>
+<dialog id="inspiration" aria-labelledby="inspiration-title"><button class="close" aria-label="Zavřít">×</button><h2 id="inspiration-title">Věřím</h2><ul class="inspiration-names"><li>Jiří Halda</li><li>Milan Studnička</li><li>Štěpánka Cimlová a Robert Čapek</li><li>Dalibor Špok</li><li>Margit Slimáková</li><li>Barbara Paldus</li></ul></dialog>
+<dialog id="reading" aria-labelledby="reading-title"><button class="close" aria-label="Zavřít">×</button><h2 id="reading-title">Čtu</h2><h3>Výchova jako teoretický problém od Jiřího Pelikána</h3><p style="line-height:1.7">Kniha se zabývá tím, jak výchova ovlivňuje člověka, co jí chceme dosáhnout a za jakých podmínek se nám to může podařit. Je to odborné přemýšlení o základech výchovy a o vztahu mezi vychovatelem a vychovávaným.</p></dialog>
+<dialog id="offering" aria-labelledby="offering-title"><button class="close" aria-label="Zavřít">×</button><h2 id="offering-title">Nabízím</h2><div class="offer-copy">
+<p class="about-label">Josefína Drbálková · novinářka a máma</p>
+<h3>Prostor pro vás a vaše mateřství</h3>
+<p>Nabízím podpůrné rozhovory o kojení a mateřství — prostor pro vaše otázky, naslouchání a sdílení zkušeností.</p>
+<p class="about-scope">Vycházím z vlastní zkušenosti s kojením. Nemám odborné vzdělání ani certifikaci v laktačním poradenství. Moje podpora nenahrazuje péči laktační poradkyně nebo zdravotníka.</p>
+<button class="support-contact" data-dialog="contact" aria-haspopup="dialog">Ozvěte se mi</button>
+</div></dialog>
+<dialog id="working" aria-labelledby="working-title"><button class="close" aria-label="Zavřít">×</button><h2 id="working-title">Pracuji</h2><div class="contact"><p>Jsem Josefína Drbálková, novinářka.</p><p><a href="mailto:josefina.drbalkova@email.cz">Napište mi</a></p></div></dialog>
 <script>
 document.querySelectorAll('[data-dialog]').forEach(button=>button.addEventListener('click',()=>document.getElementById(button.dataset.dialog).showModal()));
 document.querySelectorAll('dialog').forEach(dialog=>{
