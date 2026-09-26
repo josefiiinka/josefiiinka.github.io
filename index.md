@@ -1,10 +1,9 @@
 ---
-layout: null
+layout: homepage
 title: Mama rafiki
 lang: cs
 permalink: /
 ---
-<!DOCTYPE html>
 <html lang="cs">
 <head>
 <meta charset="utf-8">
