@@ -4,7 +4,7 @@ title: Mama rafiki
 lang: cs
 permalink: /cs/
 ---
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
 <meta charset="utf-8">
