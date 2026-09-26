@@ -81,6 +81,24 @@ main{padding:65px 16px 15px}
 .tiles .write .tile-name,.tiles .offer .tile-name,.tiles .work .tile-name{font-size:27px}
 .tiles .inspire .tile-name,.tiles .reading .tile-name{font-size:23px}
 }
+
+/* Larger circles sit near Mama rafiki; smaller circles orbit farther out. */
+.tiles .write{--x:25%;--y:23%}
+.tiles .offer{--x:75%;--y:23%}
+.tiles .work{--x:50%;--y:80%}
+.tiles .inspire{--x:12%;--y:70%}
+.tiles .reading{--x:88%;--y:70%}
+@media(min-width:701px) and (max-width:900px){
+.tiles .write{--x:24%;--y:20%}.tiles .offer{--x:76%;--y:20%}
+}
+@media(max-width:700px){
+.tiles{height:750px}
+.tiles .write{--x:24%;--y:160px}
+.tiles .offer{--x:76%;--y:160px}
+.tiles .work{--x:50%;--y:525px}
+.tiles .inspire{--x:18%;--y:670px}
+.tiles .reading{--x:82%;--y:670px}
+}
 </style>
 </head>
 <body>
