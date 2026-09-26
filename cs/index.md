@@ -56,6 +56,7 @@ main{padding:65px 16px 15px}
 .tiles .inspire .tile-name,.tiles .reading .tile-name{font-size:24px}
 }
 
+.about-support{width:min(100%,680px);margin:0 auto 55px;text-align:center;line-height:1.75}.about-label{font-size:14px;letter-spacing:.04em;color:#666}.about-support h1{font:400 clamp(28px,5vw,40px)/1.2 Georgia,serif;margin:16px 0 24px}.about-support p{margin:16px 0}.about-scope{font-size:15px;color:#555}.support-contact{border:1px solid #171717;border-radius:30px;padding:13px 26px;background:#171717;color:white;cursor:pointer;margin-top:12px}.support-contact:hover{background:#383838}.support-contact:focus-visible{outline:3px solid #171717;outline-offset:5px}
 </style>
 </head>
 <body>
@@ -67,6 +68,13 @@ main{padding:65px 16px 15px}
 <button class="tile inspire" data-dialog="inspiration" aria-haspopup="dialog"><span class="tile-name">Inspiruju se</span><span class="tile-note">Připravuji</span><span class="tile-arrow" aria-hidden="true">+</span></button>
 <button class="tile reading" data-dialog="reading" aria-haspopup="dialog"><span class="tile-name">Právě čtu</span><span class="tile-arrow" aria-hidden="true">+</span></button>
 </div>
+<section class="about-support" aria-labelledby="about-support-title">
+<p class="about-label">Josefína Drbálková · novinářka a máma</p>
+<h1 id="about-support-title">Prostor pro vás a vaše mateřství</h1>
+<p>Nabízím podpůrné rozhovory o kojení a mateřství — prostor pro vaše otázky, naslouchání a sdílení zkušeností.</p>
+<p class="about-scope">Vycházím z vlastní zkušenosti s kojením. Nemám odborné vzdělání ani certifikaci v laktačním poradenství. Moje podpora nenahrazuje péči laktační poradkyně nebo zdravotníka.</p>
+<button class="support-contact" data-dialog="contact" aria-haspopup="dialog">Ozvěte se mi</button>
+</section>
 </main>
 <footer>Mama rafiki</footer>
 <dialog id="contact" aria-labelledby="contact-title"><button class="close" aria-label="Zavřít">×</button><h2 id="contact-title">Kontakt</h2><div class="contact"><p>Josefína Drbálková</p><p><a href="tel:+420602316755">+420 602 316 755</a><br><a href="mailto:josefina.drbalkova@email.cz">josefina.drbalkova@email.cz</a></p></div></dialog>
