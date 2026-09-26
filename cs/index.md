@@ -99,6 +99,11 @@ main{padding:65px 16px 15px}
 .tiles .inspire{--x:18%;--y:670px}
 .tiles .reading{--x:82%;--y:670px}
 }
+
+/* Prevent intrinsic button text width from stretching circles on mobile. */
+.tiles .tile{box-sizing:border-box;min-width:0;max-width:none;flex-shrink:0;inline-size:var(--size);block-size:var(--size);padding:12px;border-radius:50%;appearance:none;-webkit-appearance:none}
+.tiles .tile .tile-name{min-width:0;max-width:100%;white-space:normal}
+@media(max-width:700px){.tiles .offer .tile-name,.tiles .work .tile-name,.tiles .write .tile-name{font-size:25px}.tiles .center{max-width:none}}
 </style>
 </head>
 <body>
