@@ -117,6 +117,7 @@ main{padding:65px 16px 15px}
 .tiles .inspire .tile-name{font-size:21px}
 @media(max-width:700px){.tiles .inspire .tile-name{font-size:14px}.tiles .reading .tile-name{font-size:18px}}
 </style>
+<link rel="stylesheet" href="{{ '/assets/css/typography.css?v=' | append: site.github.build_revision | relative_url }}">
 </head>
 <body>
 {% include language_switcher.html homepage=true %}

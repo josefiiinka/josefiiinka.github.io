@@ -115,6 +115,7 @@ main{padding:65px 16px 15px}
 .tiles .tile .tile-name{min-width:0;max-width:100%;white-space:normal}
 @media(max-width:700px){.tiles .offer .tile-name,.tiles .work .tile-name,.tiles .write .tile-name{font-size:25px}.tiles .center{max-width:none}}
 </style>
+<link rel="stylesheet" href="{{ '/assets/css/typography.css?v=' | append: site.github.build_revision | relative_url }}">
 </head>
 <body>
 {% include language_switcher.html homepage=true %}

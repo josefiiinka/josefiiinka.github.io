@@ -17,7 +17,8 @@
     {% include search_metadata.html %}
     {% include head-custom.html %}
     {% include alternate_languages.html %}
-  </head>
+  <link rel="stylesheet" href="{{ '/assets/css/typography.css?v=' | append: site.github.build_revision | relative_url }}">
+</head>
 
   <body>
     {% include language_switcher.html %}

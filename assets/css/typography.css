@@ -1,0 +1,31 @@
+/* Shared classic typewriter typography for both public language versions. */
+body,
+body button,
+body input,
+body textarea,
+body select,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .tile-name,
+body dialog h2,
+body dialog h3,
+body .about-support h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Keep the longer English label inside its existing small circle. */
+html[lang="en"] .tiles .inspire {
+  padding: 4px;
+}
+html[lang="en"] .tiles .inspire .tile-name {
+  font-size: 17px;
+}
+@media (max-width: 700px) {
+  html[lang="en"] .tiles .inspire .tile-name {
+    font-size: 12px;
+  }
+}
