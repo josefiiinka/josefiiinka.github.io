@@ -1,14 +1,18 @@
-<div class="language-switcher">
-  <a href="{{ '/' | relative_url }}" class="lang-link {% if page.lang == 'en' %}active{% endif %}" title="English">
-    <span class="lang-flag">🇬🇧</span>
-    <span class="lang-text">EN</span>
+{% include translation_targets.html %}
+{% if include.homepage %}
+<nav class="languages" aria-label="{% if page.lang == 'cs' %}Jazyk{% else %}Language{% endif %}">
+  <a href="{{ cs_url | relative_url }}" lang="cs" hreflang="cs" title="Čeština"{% if page.lang == 'cs' %} aria-current="page"{% endif %}>CS</a>
+  <a href="{{ en_url | relative_url }}" lang="en" hreflang="en" title="English"{% if page.lang == 'en' %} aria-current="page"{% endif %}>EN</a>
+</nav>
+{% else %}
+<nav class="language-switcher" aria-label="{% if page.lang == 'cs' %}Jazyk{% else %}Language{% endif %}">
+  <a href="{{ en_url | relative_url }}" class="lang-link {% if page.lang == 'en' %}active{% endif %}" lang="en" hreflang="en" title="English"{% if page.lang == 'en' %} aria-current="page"{% endif %}>
+    <span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-text">EN</span>
   </a>
-  <a href="{{ '/cs/' | relative_url }}" class="lang-link {% if page.lang == 'cs' %}active{% endif %}" title="Čeština">
-    <span class="lang-flag">🇨🇿</span>
-    <span class="lang-text">CS</span>
+  <a href="{{ cs_url | relative_url }}" class="lang-link {% if page.lang == 'cs' %}active{% endif %}" lang="cs" hreflang="cs" title="Čeština"{% if page.lang == 'cs' %} aria-current="page"{% endif %}>
+    <span class="lang-flag" aria-hidden="true">🇨🇿</span><span class="lang-text">CS</span>
   </a>
-</div>
-
+</nav>
 <style>
   .language-switcher {
     position: fixed;
@@ -52,3 +56,5 @@
     font-weight: 500;
   }
 </style>
+
+{% endif %}

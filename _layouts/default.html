@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.default_lang | default: "cs" }}">
 
   <head>
     <meta charset='utf-8'>
@@ -15,10 +15,11 @@
 
 {% seo %}
     {% include head-custom.html %}
-    {% include language_switcher.html %}
+    {% include alternate_languages.html %}
   </head>
 
   <body>
+    {% include language_switcher.html %}
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
@@ -27,7 +28,7 @@
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
 
-          <h1 id="project_title"><a href="{% if page.lang == 'cs' %}{{ '/cs/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{{ site.title | default: site.github.repository_name }}</a></h1>
+          <h1 id="project_title"><a href="{% if page.lang == 'cs' %}{{ '/cs/' | relative_url }}{% else %}{{ '/en/' | relative_url }}{% endif %}">{{ site.title | default: site.github.repository_name }}</a></h1>
           {% unless page.lang == 'cs' %}
           {% if site.descriptions %}
           <h2 id="project_tagline">{{ site.descriptions[page.lang] | default: site.description | default: site.github.project_tagline }}</h2>

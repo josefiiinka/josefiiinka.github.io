@@ -3,7 +3,7 @@ plugins:
 - jekyll-remote-theme
 
 # Default language
-default_lang: en
+default_lang: cs
 
 # Site settings
 title: Mama Rafiki
@@ -24,6 +24,7 @@ language_names:
   cs: Čeština
 
 # URL structure
+url: "https://mamarafiki.cz"
 permalink: /:lang/:title/
 
 # Collections for i18n
@@ -35,6 +36,9 @@ i18n:
 # Exclude from processing
 exclude:
   - README.md
+  - AGENTS.md
+  - scripts
+  - tests
   - .gitignore
   - .DS_Store
 

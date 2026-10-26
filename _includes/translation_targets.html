@@ -1,0 +1,12 @@
+{%- assign cs_url = '/cs/' -%}
+{%- assign en_url = '/en/' -%}
+{%- if page.translation_key and page.translation_key != 'home' -%}
+  {%- assign translations = site.pages | where: 'translation_key', page.translation_key -%}
+  {%- for translation in translations -%}
+    {%- if translation.lang == 'cs' -%}
+      {%- assign cs_url = translation.url -%}
+    {%- elsif translation.lang == 'en' -%}
+      {%- assign en_url = translation.url -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

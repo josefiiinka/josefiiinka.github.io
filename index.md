@@ -2,6 +2,7 @@
 layout: homepage
 title: Mama rafiki
 lang: cs
+translation_key: home
 permalink: /
 ---
 <html lang="cs">
@@ -9,6 +10,7 @@ permalink: /
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mama rafiki</title>
+{% include alternate_languages.html %}
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f7f7f7;color:#171717;font-family:Arial,Helvetica,sans-serif;font-size:16px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit}a{color:inherit}
 .languages{position:absolute;top:30px;right:5vw;display:flex;gap:20px;font-size:14px;z-index:2}.languages a{text-decoration:none;padding:8px 0}.languages [aria-current]{border-bottom:1px solid #171717}
@@ -107,7 +109,7 @@ main{padding:65px 16px 15px}
 </style>
 </head>
 <body>
-<nav class="languages" aria-label="Jazyk"><a href="/cs/" lang="cs" aria-current="page">CS</a><a href="/en/" lang="en">EN</a></nav>
+{% include language_switcher.html homepage=true %}
 <main>
 <div class="tiles" aria-label="Mama rafiki — rozcestník">
 <button class="tile center" data-dialog="contact" aria-haspopup="dialog" aria-label="Mama rafiki – otevřít kontakt"><span class="tile-name">Mama<br>rafiki</span></button>
