@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mamarafiki.cz/sitemap.xml

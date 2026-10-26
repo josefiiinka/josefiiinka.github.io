@@ -1,15 +1,21 @@
 ---
 layout: homepage
-title: Mama rafiki
+title: Mateřství a rodinný život
 lang: cs
 translation_key: home
+description: "Osobní blog Josefíny Drbálkové o mateřství, rodině a každodenním životě. Autentické zkušenosti mámy tří synů a podpůrné rozhovory o mateřství."
+locale: cs_CZ
+seo:
+  type: WebSite
+  name: Mama Rafiki
 permalink: /cs/
 ---
 <html lang="cs">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mama rafiki</title>
+{% seo %}
+{% include search_metadata.html %}
 {% include alternate_languages.html %}
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f7f7f7;color:#171717;font-family:Arial,Helvetica,sans-serif;font-size:16px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit}a{color:inherit}

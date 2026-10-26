@@ -21,3 +21,13 @@
 - Přepínač hledá skutečnou adresu protějšku podle `translation_key`. Metadata `hreflang` používají stejné cíle.
 - `index.md` a `cs/index.md` jsou české varianty téhož rozcestníku, `en/index.md` je jeho úplná anglická verze.
 - Pokyny pro agenty a validační skripty nepatří do veřejného obsahu; ponechte je v `exclude` v `_config.yml`.
+
+## SEO a strojová čitelnost bez změn vzhledu
+- Každá jazyková verze potřebuje vlastní věcný `description`, správné `locale` a `seo.type`: články a deník `BlogPosting`, tematické přehledy `CollectionPage`, úvod `WebSite`.
+- Metadata musí odpovídat skutečnému textu. Nevymýšlejte data publikace či aktualizace, odbornost autorky, recenze, hodnocení ani profily.
+- Použijte existující obrázek článku jako `image` v metadatech včetně přeloženého `alt` a skutečných rozměrů, pokud jej článek obsahuje. Obrázky kvůli SEO nemusíte přidávat.
+- V hlavičce musí být právě jeden SEO výstup (`{% seo %}`), sdílená metadata a jazykové alternativy. Neměňte CSS ani viditelný obsah při čistě technické SEO úpravě.
+- Český kořen `/` má canonical na `/cs/` a `sitemap: false`; obě jazykové verze jinak mají vlastní canonical. Zachovejte existující URL.
+- `sitemap.xml` automaticky zahrnuje stránky s `translation_key`, kromě `sitemap: false`. Nevkládejte do něj interní nástroje nebo umělá data změny.
+- `robots.txt` umožňuje procházení veřejného obsahu a odkazuje na mapu webu. Zachovejte `noindex` interního Office. Robots.txt není ochrana soukromí.
+- Spusťte také `python scripts/check_seo.py`; po nasazení lze ověřit živé stránky příkazem `python scripts/check_seo.py --live`.

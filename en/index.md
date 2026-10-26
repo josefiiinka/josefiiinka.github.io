@@ -1,15 +1,21 @@
 ---
 layout: homepage
-title: Mama rafiki
+title: Motherhood and family life
 lang: en
 translation_key: home
+description: "Josefína Drbálková’s personal blog about motherhood, family and everyday life. Honest experiences from a mum of three and supportive conversations about motherhood."
+locale: en_GB
+seo:
+  type: WebSite
+  name: Mama Rafiki
 permalink: /en/
 ---
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mama rafiki</title>
+{% seo %}
+{% include search_metadata.html %}
 {% include alternate_languages.html %}
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f7f7f7;color:#171717;font-family:Arial,Helvetica,sans-serif;font-size:16px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit}a{color:inherit}

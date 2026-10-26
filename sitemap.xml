@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- assign public_pages = site.pages | sort: 'url' -%}
+{%- for item in public_pages -%}
+  {%- if item.translation_key and item.sitemap != false -%}
+  <url>
+    <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+    {%- if item.last_modified_at %}
+    <lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- endif -%}
+    {%- assign variants = site.pages | where: 'translation_key', item.translation_key -%}
+    {%- for variant in variants -%}
+      {%- if variant.sitemap != false %}
+    <xhtml:link rel="alternate" hreflang="{{ variant.lang }}" href="{{ variant.url | absolute_url | xml_escape }}" />
+        {%- if variant.lang == 'cs' %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ variant.url | absolute_url | xml_escape }}" />
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor %}
+  </url>
+  {%- endif -%}
+{%- endfor %}
+</urlset>
